@@ -1,9 +1,12 @@
 {
   "name": "tim-chat",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Chat plug in based on Tim",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --mode=development --devtool inline-source-map --hot",
+    "build": "webpack --mode=production",
+    "build:none": "webpack --mode=none -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +24,15 @@
   },
   "homepage": "https://github.com/NotBerlin/tim-char-plugin#readme",
   "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
     "cos-js-sdk-v5": "^0.5.22",
-    "tim-js-sdk": "^2.6.6"
+    "tim-js-sdk": "^2.6.6",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0"
   }
 }
